@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->middleware('auth')->name('home');
+Route::get('/login', [HomeController::class, 'login'])->middleware('guest')->name('login');
+Route::post('/auth', [HomeController::class, 'auth'])->middleware('guest')->name('auth');
