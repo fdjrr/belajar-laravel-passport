@@ -11,7 +11,7 @@ $ php artisan migrate
 # Create Client using CLI
 
 ```bash
-$ php artisan php artisan passport:client
+$ php artisan passport:client
 ```
 
 YouTube Video : `https://www.youtube.com/watch?v=PTFPMAX_88s&t=850s&ab_channel=AndrewSchmelyun`
